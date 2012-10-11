@@ -1,13 +1,8 @@
+<?php
+    $imgarr=DealsImage::getImg($data->deals_id);
+    $data->deals_image=Deals::arr2str($imgarr);
+?>
 <div class="view">
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('deals_id')); ?>:</b>
-	<?php echo CHtml::link(CHtml::encode($data->deals_id), array('view', 'id'=>$data->deals_id)); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('category_id')); ?>:</b>
-	<?php echo CHtml::encode($data->category_id); ?>
-	<br />
-
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('title')); ?>:</b>
 	<?php echo CHtml::encode($data->title); ?>
@@ -21,8 +16,7 @@
 	<?php echo CHtml::encode($data->price); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('language')); ?>:</b>
-	<?php echo CHtml::encode($data->language); ?>
+	<?php echo CHtml::link('<img width="230" src="'.$data->deals_image.'">', array('view', 'id'=>$data->deals_id));?>
 	<br />
 
 	<?php /*
