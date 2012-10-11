@@ -46,6 +46,7 @@
         <?php echo $form->error($model,'code_image'); ?>
     </div>
 
+
     <div class="row">
     <?php echo '图片预览' ?>
     <?php echo '<img id =showimg src="'.Yii::app()->baseUrl.$model->code_image.'" style="width:200px;"/>'; ?>
